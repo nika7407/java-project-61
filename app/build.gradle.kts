@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("application")
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -20,6 +21,10 @@ java {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+checkstyle {
+    toolVersion = "10.12.4"
+    configFile = file("config/checkstyle/checkstyle.xml")
 }
 
 
