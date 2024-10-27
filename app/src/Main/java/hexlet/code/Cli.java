@@ -8,7 +8,7 @@ public class Cli {
 
     public static String greet() {
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Please input your name and press enter:");
+        System.out.println("\nPlease input your name and press enter:");
         String name = userInput.next();
         System.out.println("Hello, " + name + "!");
         return name;
