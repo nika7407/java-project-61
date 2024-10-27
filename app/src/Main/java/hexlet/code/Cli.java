@@ -27,4 +27,9 @@ public class Cli {
         }
     }
 
+    public static void printMenu(){
+        System.out.println("--------\n| MENU | \n--------\nto start please enter corresponding number:\n1 - Greet\n2 - IsEven\n3 - Calculator\n0 - Exit");
+
+    }
+
 }

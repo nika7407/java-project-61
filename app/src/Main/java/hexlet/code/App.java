@@ -1,7 +1,7 @@
 package hexlet.code;
 public class App {
     public static void main(String[] args) {
-        System.out.println("--------\n| MENU | \n--------\nto start please enter corresponding number:\n1 - Greet\n2 - IsEven\n0 - Exit");
+       Cli.printMenu();
         while (true) {
            switch (Cli.numberInput()) {
                case 1:
@@ -13,6 +13,10 @@ public class App {
 
                case 2:
                    isEven.main(args);
+                   break;
+
+               case 3:
+                   Calc.main(args);
                    break;
 
                case 0:
