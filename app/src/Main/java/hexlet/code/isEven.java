@@ -5,18 +5,20 @@ public class isEven {
     public static void main(String[] args) {
         String name = Cli.greet();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
         int rightAnswer = 0;
         Random random = new Random();
+
         while (rightAnswer<3){
             String answer;
             int number = random.nextInt(101);
             System.out.println("Question: "+number);
+
             if (number % 2 == 0){
                 answer = "yes";
             } else {
                 answer = "no";
             }
+
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             if (input.toLowerCase().equals(answer)){
@@ -26,7 +28,8 @@ public class isEven {
                 System.out.println("Answer: " +input+ "\nWrong!\ncorrect answer: "+answer);
                 rightAnswer=0;
                 System.out.println("you're wrong,"+name+" Better luck next time!");
-                App.main(args);
+                System.out.println("--------\n| MENU | \n--------\nto start please enter corresponding number:\n1 - Greet\n2 - IsEven\n0 - Exit");
+                return;
             }
 
         }
