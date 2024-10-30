@@ -1,6 +1,7 @@
 package hexlet.code;
 import java.util.Scanner;
 import java.util.Random;
+import hexlet.code.App;
 public class isEven {
     public static void main(String[] args) {
         String name = Cli.greet();
@@ -20,16 +21,16 @@ public class isEven {
             }
 
             Scanner scanner = new Scanner(System.in);
+
             String input = scanner.nextLine();
             if (input.toLowerCase().equals(answer)){
              rightAnswer++;
              System.out.println("Answer: " +input+ "\nCorrect!");
-            }else{
+            } else {
                 System.out.println("Answer: " +input+ "\nWrong!\ncorrect answer: "+answer);
                 rightAnswer=0;
                 System.out.println("you're wrong,"+name+" Better luck next time!\n");
-                Cli.printMenu();
-                return;
+                App.main(args);
             }
 
         }

@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -8,16 +9,14 @@ public class Calc {
 
         String name = Cli.greet();
         System.out.println("\n" + name + ", you will be given random matematical expression,and you need to answer it");
-        Random rand1 = new Random();
-        Random rand2 = new Random();
-        Random rand3 = new Random();
+        Random rand = new Random();
         int rightAnswer = 0;
 
         while (rightAnswer < 3) {
             int answer = 0;
-            int number1 = rand1.nextInt(20);
-            int number2 = rand2.nextInt(20);
-            int operatorVariable = rand3.nextInt(3);
+            int number1 = rand.nextInt(20);
+            int number2 = rand.nextInt(20);
+            int operatorVariable = rand.nextInt(3);
 
             switch (operatorVariable) {
 
@@ -45,7 +44,19 @@ public class Calc {
             }
 
             Scanner scanner = new Scanner(System.in);
-            int input = scanner.nextInt();
+            int input = 0;
+
+            try {
+                input = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("\nWrong!, thats not a number\ncorrect answer: " + answer);
+                rightAnswer = 0;
+                System.out.println("you're wrong," + name + " Better luck next time!\n");
+                Cli.printMenu();
+                break;
+
+            }
+
             if (input == answer) {
                 System.out.println("Answer: " + input + "\nCorrect!\n");
                 rightAnswer++;
@@ -54,13 +65,14 @@ public class Calc {
                 rightAnswer = 0;
                 System.out.println("you're wrong," + name + " Better luck next time!\n");
                 Cli.printMenu();
-                return;
+                break;
             }
 
         }
         if (rightAnswer == 3) {
             System.out.println("Congratulations " + name + " you won!");
-            App.main(args);
+            Cli.printMenu();
+
 
         }
     }
