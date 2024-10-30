@@ -23,6 +23,10 @@ public class App {
                    GCD.main(args);
                    break;
 
+               case 5:
+                   Progression.main(args);
+                   break;
+
 
                case 0:
                    System.out.println("Goodbye!");
