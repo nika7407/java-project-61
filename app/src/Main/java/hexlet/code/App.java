@@ -27,6 +27,10 @@ public class App {
                    Progression.main(args);
                    break;
 
+               case 6:
+                   Prime.main(args);
+                   break;
+
 
                case 0:
                    System.out.println("Goodbye!");
