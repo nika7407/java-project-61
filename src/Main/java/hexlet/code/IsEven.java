@@ -29,13 +29,14 @@ public class IsEven {
                 System.out.println("Answer: " + input + "\nWrong!\ncorrect answer: " + answer);
                 rightAnswer = 0;
                 System.out.println("you're wrong," + name + " Better luck next time!\n");
-                App.main(args);
+                Cli.printMenu();
+                break;
             }
 
         }
         if (rightAnswer == 3) {
             System.out.println("Congratulations " + name + " you won!");
-            App.main(args);
+            Cli.printMenu();
         }
     }
 }

@@ -53,7 +53,7 @@ public class GCD {
 
         if (rightAnswer == 3) {
             System.out.println("Congratulations " + name + " you won!");
-            App.main(args);
+            Cli.printMenu();
 
         }
 
