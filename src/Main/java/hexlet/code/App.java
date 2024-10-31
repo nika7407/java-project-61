@@ -12,7 +12,7 @@ public class App {
                     break;
 
                 case 2:
-                    isEven.main(args);
+                    IsEven.main(args);
                     break;
 
                 case 3:

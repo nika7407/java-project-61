@@ -41,6 +41,9 @@ public class Calc {
                     System.out.println("What is " + number1 + " * " + number2 + " ?");
                     break;
 
+                default:
+                    System.out.println("Something went very wrong ");
+                    break;
             }
 
             Scanner scanner = new Scanner(System.in);
@@ -77,3 +80,4 @@ public class Calc {
         }
     }
 }
+

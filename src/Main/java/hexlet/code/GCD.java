@@ -7,7 +7,8 @@ import java.util.InputMismatchException;
 public class GCD {
     public static void main(String[] args) {
         String name = Cli.greet();
-        System.out.println("\n" + name + ", you will be given two random numbers,\n and you need to write their greatest common divider\n");
+        System.out.println("\n" + name + ", you will be given two random numbers,"
+               + "\n and you need to write their greatest common divider\n");
         Random rand1 = new Random();
         Random rand2 = new Random();
         int rightAnswer = 0;

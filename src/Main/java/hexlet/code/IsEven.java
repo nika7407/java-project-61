@@ -1,8 +1,7 @@
 package hexlet.code;
 import java.util.Scanner;
 import java.util.Random;
-import hexlet.code.App;
-public class isEven {
+public class IsEven {
     public static void main(String[] args) {
         String name = Cli.greet();
         System.out.println("\nAnswer 'yes' if the number is even, otherwise answer 'no'.");

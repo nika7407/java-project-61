@@ -7,7 +7,8 @@ import java.util.Random;
 public class Progression {
     public static void main(String[] args) {
         String name = Cli.greet();
-        System.out.println("\n" + name + ", you will be given random progression\nand you will need to write missing element");
+        System.out.println("\n" + name + ", you will be given random progression"
+               + "\nand you will need to write missing element");
 
         Random rand = new Random();
         int min = 6; // inclusive
