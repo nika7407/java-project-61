@@ -31,9 +31,9 @@ public class Calc {
                     break;
 
                 case 2:
-                    if (number1==0) {
+                    if (number1 == 0) {
                         number1++;
-                    } else if (number2==0){
+                    } else if (number2 == 0) {
                         number2++;
                     }
 

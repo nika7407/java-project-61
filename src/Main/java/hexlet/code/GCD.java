@@ -1,37 +1,32 @@
 package hexlet.code;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
+import java.util.InputMismatchException;
 
-public class Progression {
+public class GCD {
     public static void main(String[] args) {
         String name = Cli.greet();
-        System.out.println("\n" + name + ", you will be given random progression\nand you will need to write missing element");
-
-        Random rand = new Random();
-        int min = 6; // inclusive
-        int max = 12; // exclusive
+        System.out.println("\n" + name + ", you will be given two random numbers,\n and you need to write their greatest common divider\n");
+        Random rand1 = new Random();
+        Random rand2 = new Random();
         int rightAnswer = 0;
 
-        while (rightAnswer < 3){
-            int start =  rand.nextInt(101);
-            int step  =  rand.nextInt(10)+1;
-            int randomInt = rand.nextInt(max - min) + min;
-            int empty =  rand.nextInt(randomInt);
-
-            for (int i=0; i<randomInt; i++){
-                if (i!=empty) {
-                    System.out.print(start + (step * i)+" ");
+        while (rightAnswer < 3) {
+            int numb1 = rand1.nextInt(40);
+            int numb2 = rand2.nextInt(40);
+            System.out.println("\nWhat is greatest common divisor of " + numb1 + " and " + numb2 + " ?");
+            int answer;
+            while (numb1 != numb2) {
+                if (numb1 > numb2) {
+                    numb1 = numb1 - numb2;
                 } else {
-                    System.out.print("... ");
+                    numb2 = numb2 - numb1;
                 }
-
             }
-            System.out.println("\n");
-            int answer = start + (step * empty);
+            answer = numb1;
             Scanner scanner = new Scanner(System.in);
-            int input = 0;
+            int input = 1;
             try {
                 input = scanner.nextInt();
             } catch (InputMismatchException e) {
@@ -41,6 +36,7 @@ public class Progression {
                 Cli.printMenu();
                 break;
             }
+
             if (input == answer) {
                 System.out.println("Answer: " + input + "\nCorrect!\n");
                 rightAnswer++;
@@ -52,15 +48,14 @@ public class Progression {
                 break;
             }
 
-
-
         }
+
         if (rightAnswer == 3) {
             System.out.println("Congratulations " + name + " you won!");
-            Cli.printMenu();
-
+            App.main(args);
 
         }
 
     }
 }
+
