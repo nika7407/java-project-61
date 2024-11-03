@@ -1,14 +1,36 @@
 package hexlet.code;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class App {
-    public static void main(String[] args) {
-        Cli.printMenu();
+
+    public static void printMenu() {
+        System.out.println("--------\n| MENU | \n--------\nto start please enter corresponding number: "
+                + "\n1 - Greet\n2 - IsEven\n3 - Calculator\n4 - GDC\n5 - Progression\n6 - IsPrime\n0 - Exit");
+
+    }
+
+    public static int numberInput() {
+        Scanner userInput = new Scanner(System.in);
+
         while (true) {
-            int choice = Cli.numberInput();
+            try {
+                return userInput.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a number:");
+                userInput.next(); // Clear the invalid input
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        App.printMenu();
+
+            int choice = App.numberInput();
             switch (choice) {
                 case 1:
-                    System.out.println("Welcome to the Brain Games!");
-                    String name = Cli.greet();
-                    System.out.println(name + " please choose the game and type corresponding number:");
+                    Cli.greet();
                     break;
 
                 case 2:
@@ -34,7 +56,7 @@ public class App {
 
                 case 0:
                     System.out.println("Goodbye!");
-                    return;
+                    break;
 
                 default:
                     System.out.println("Wrong input!");
@@ -47,4 +69,4 @@ public class App {
 
     }
 
-}
+

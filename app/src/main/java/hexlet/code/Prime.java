@@ -1,57 +1,35 @@
 package hexlet.code;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Prime {
     public static void main(String[] args) {
 
-        String name = Cli.greet();
-        System.out.println("\nAnswer 'yes' if the number is prime, otherwise answer 'no'.");
-        int rightAnswer = 0;
-        Random random = new Random();
+        String[][] answersQuestions = new String[3][2];
 
-        while (rightAnswer < 3) {
-            String answer;
-            int number = random.nextInt(101);
-            System.out.println(number + " is it prime?");
-            boolean isPrime = true;
+        Random random = new Random();
+        String gameObjective = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+
+        for (int i = 0; i < 3; i++) {
+
+
+            int number = random.nextInt(100) + 1;
+            answersQuestions[i][0] = String.valueOf(number);
             if (number < 2) {
-                isPrime = false;
+                answersQuestions[i][1] = "no";
             } else {
-                for (int i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        isPrime = false;
+                for (int k = 2; k < number; k++) {
+                    if (number % k == 0) {
+                        answersQuestions[i][1] = "no";
                         break;
-                    }
+                    } else {answersQuestions[i][1] = "yes";}
                 }
             }
 
-            if (isPrime) {
-                answer = "yes";
-            } else {
-                answer = "no";
-            }
-
-            Scanner scanner = new Scanner(System.in);
-
-            String input = scanner.nextLine();
-            if (input.toLowerCase().equals(answer)) {
-                rightAnswer++;
-                System.out.println("Answer: " + input + "\nCorrect!");
-            } else {
-                System.out.println("Answer: " + input + "\nWrong!\ncorrect answer: " + answer);
-                rightAnswer = 0;
-                System.out.println("you're wrong," + name + " Better luck next time!\n");
-                Cli.printMenu();
-                break;
-            }
-
         }
-        if (rightAnswer == 3) {
-            System.out.println("Congratulations " + name + " you won!");
-            Cli.printMenu();
-        }
+
+       Engine.Run(answersQuestions, gameObjective);
 
     }
+
 }

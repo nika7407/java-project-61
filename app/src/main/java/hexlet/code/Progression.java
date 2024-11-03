@@ -1,67 +1,48 @@
 package hexlet.code;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.Random;
 
 public class Progression {
     public static void main(String[] args) {
-        String name = Cli.greet();
-        System.out.println("\n" + name + ", you will be given random progression"
-               + "\nand you will need to write missing element");
+
+        String gameObjective = "What number is missing in the progression?";
 
         Random rand = new Random();
-        int min = 6; // inclusive
-        int max = 12; // exclusive
-        int rightAnswer = 0;
+        String[][] answersQuestions = new String[3][2];
 
-        while (rightAnswer < 3) {
+
+        for (int i = 0; i < 3; i++) {
             int start = rand.nextInt(101);
             int step = rand.nextInt(10) + 1;
-            int randomInt = rand.nextInt(max - min) + min;
-            int empty = rand.nextInt(randomInt);
+            int randomInt = rand.nextInt(6)+6;
+            int empty = rand.nextInt(randomInt-1)+1;
 
-            for (int i = 0; i < randomInt; i++) {
-                if (i != empty) {
-                    System.out.print(start + (step * i) + " ");
-                } else {
-                    System.out.print("... ");
-                }
+            int[] givenString = new int[randomInt];
+            answersQuestions[i][0] = "";
+            for (int k = 0; k < randomInt; k++) {
+
+                    givenString[k] = (start + (step * k));
 
             }
-            System.out.println("\n");
-            int answer = start + (step * empty);
-            Scanner scanner = new Scanner(System.in);
-            int input = 0;
-            try {
-                input = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("\nWrong!, thats not a number\ncorrect answer: " + answer);
-                rightAnswer = 0;
-                System.out.println("you're wrong," + name + " Better luck next time!\n");
-                Cli.printMenu();
-                break;
+            answersQuestions[i][1] = String.valueOf(givenString[empty]);
+
+            for (int m = 0; m < givenString.length; m++) {
+               if(m != empty) {
+                    answersQuestions[i][0] += givenString[m];
+                    if (m < givenString.length - 1) {
+                        answersQuestions[i][0] += " ";
+                    }
+                }else {
+                   answersQuestions[i][0] += " .. ";
+               }
             }
-            if (input == answer) {
-                System.out.println("Answer: " + input + "\nCorrect!\n");
-                rightAnswer++;
-            } else {
-                System.out.println("Answer: " + input + "\nWrong!\ncorrect answer: " + answer);
-                rightAnswer = 0;
-                System.out.println("you're wrong," + name + " Better luck next time!\n");
-                Cli.printMenu();
-                break;
-            }
+
 
 
 
         }
-        if (rightAnswer == 3) {
-            System.out.println("Congratulations " + name + " you won!");
-            Cli.printMenu();
 
-
-        }
+        Engine.Run(answersQuestions, gameObjective);
 
     }
 }
