@@ -33,7 +33,7 @@ public class Progression {
                         answersQuestions[i][0] += " ";
                     }
                 }else {
-                   answersQuestions[i][0] += " .. ";
+                   answersQuestions[i][0] += ".. ";
                }
             }
 
