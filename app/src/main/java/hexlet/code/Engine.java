@@ -20,7 +20,7 @@ public class Engine {
              roundCounter++;
          } else {
              System.out.println("'"+input+"' is wrong answer ;(. Correct answer was '"+answersQuestions[roundCounter][1]+"'.\n" +
-                     "Let's try again, Bill!);");
+                     "Let's try again, "+name+"!);");
              System.exit(0);
 
          }
