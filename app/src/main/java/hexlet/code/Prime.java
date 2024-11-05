@@ -10,7 +10,7 @@ public class Prime {
     public static void main(String[] args) {
         int question = 0;
         int answer = 1;
-        String gameObjective = "Answer 'yes' if the given number is prime. Otherwise answer 'no'.";
+        String gameObjective = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] answersQuestions = new String[AMOUNT_OF_ROUNDS][2];
         Random random = new Random();
 
