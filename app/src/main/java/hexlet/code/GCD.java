@@ -3,23 +3,21 @@ package hexlet.code;
 import java.util.Random;
 
 public class GCD {
+
+    private static final int UPPER_LIMIT = 100;
+    private static final int AMOUNT_OF_ROUNDS = 3;
+
     public static void main(String[] args) {
         int question = 0;
         int answer = 1;
-        int upperLimit = 100;
-        int amountOfRounds = 3;
-        String gameObjective = "Find the greatest "
-                + "common divisor of given numbers.";
+        String gameObjective = "Find the greatest common divisor of given numbers.";
         Random rand = new Random();
-        String[][] answersQuestions = new String[amountOfRounds][2];
+        String[][] answersQuestions = new String[AMOUNT_OF_ROUNDS][2];
 
-        for (int currendRound = 0;
-             currendRound < amountOfRounds;
-             currendRound++) {
-            int numb1 = rand.nextInt(upperLimit) + 1;
-            int numb2 = rand.nextInt(upperLimit) + 1;
-            // +1 ensures that limit is not going to be zero
-            answersQuestions[currendRound][question] = numb1 + " " + numb2;
+        for (int currentRound = 0; currentRound < AMOUNT_OF_ROUNDS; currentRound++) {
+            int numb1 = rand.nextInt(UPPER_LIMIT) + 1;
+            int numb2 = rand.nextInt(UPPER_LIMIT) + 1;
+            answersQuestions[currentRound][question] = numb1 + " " + numb2;
 
             while (numb1 != numb2) {
                 if (numb1 > numb2) {
@@ -29,10 +27,9 @@ public class GCD {
                 }
             }
 
-            answersQuestions[currendRound][answer] = String.valueOf(numb1);
-
+            answersQuestions[currentRound][answer] = String.valueOf(numb1);
         }
-        Engine.Run(answersQuestions, gameObjective);
+
+        Engine.run(answersQuestions, gameObjective);
     }
 }
-
