@@ -8,6 +8,7 @@ public class Progression {
     private static final int UPPER_LIMIT_STEP = 10;
     private static final int MIN_LENGTH = 6;
     private static final int AMOUNT_OF_ROUNDS = 3;
+    private static final int MAX_LENGTH = 6;
 
     public static void main(String[] args) {
         int question = 0;
@@ -19,7 +20,7 @@ public class Progression {
         for (int currentRound = 0; currentRound < AMOUNT_OF_ROUNDS; currentRound++) {
             int start = rand.nextInt(UPPER_LIMIT_START) + 1;
             int step = rand.nextInt(UPPER_LIMIT_STEP) + 1;
-            int length = rand.nextInt(6) + MIN_LENGTH;  // Ensures length is between 6 and 11
+            int length = rand.nextInt(MAX_LENGTH) + MIN_LENGTH;  // Ensures length is between 6 and 11
             int empty = rand.nextInt(length);  // Random index to hide in the progression
 
             int[] progression = new int[length];

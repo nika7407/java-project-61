@@ -9,16 +9,16 @@ public class Calc {
     private static final int ADD_OPERATOR = 0;
     private static final int SUBTRACT_OPERATOR = 1;
     private static final int MULTIPLY_OPERATOR = 2;
+    private static final int AMOUNT_OF_ROUNDS = 3;
 
     public static void main(String[] args) {
         int question = 0;
         int answer = 1;
-        int amountOfRounds = 3;
         String gameObjective = "What is the result of the expression?";
         Random rand = new Random();
-        String[][] answersQuestions = new String[amountOfRounds][2];
+        String[][] answersQuestions = new String[AMOUNT_OF_ROUNDS][2];
 
-        for (int i = 0; i < amountOfRounds; i++) {
+        for (int i = 0; i < AMOUNT_OF_ROUNDS; i++) {
             int number1 = rand.nextInt(UPPER_LIMIT) + 1;
             int number2 = rand.nextInt(UPPER_LIMIT) + 1;
             int operatorVariable = rand.nextInt(OPERATOR_COUNT);
