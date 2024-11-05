@@ -15,7 +15,7 @@ public class Prime {
         for (int currentRound = 0; currentRound < amountOfRounds; currentRound++) {
             int number = random.nextInt(upperLimit) + 1;
             answersQuestions[currentRound][question] = String.valueOf(number);
-            if (number < 2) {
+            if (number <= 1) {
                 answersQuestions[currentRound][answer] = "no";
             } else {
                 for (int k = 2; k < number; k++) {
