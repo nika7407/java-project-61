@@ -4,20 +4,27 @@ import java.util.Random;
 
 public class IsEven {
     public static void main(String[] args) {
+        int question = 0;
+        int answer = 1;
+        int amountOfRounds = 3;
+        int upperLimit = 100;
 
-        String gameObjective = ("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        String[][] answersQuestions = new String[3][2];
+        String gameObjective = ("Answer 'yes' if the number "
+                + "is even, otherwise answer 'no'.");
+        String[][] answersQuestions = new String[amountOfRounds][2];
         Random random = new Random();
 
-        for (int i = 0; i < 3; i++) {
+        for (int currentRound = 0;
+             currentRound < amountOfRounds;
+             currentRound++) {
 
-            int number = random.nextInt(100)+1;
-            answersQuestions[i][0] = String.valueOf(number);
-
+            int number = random.nextInt(upperLimit) + 1;
+            // +1 ensures that limit is not going to be zero
+            answersQuestions[currentRound][question] = String.valueOf(number);
             if (number % 2 == 0) {
-                answersQuestions[i][1] = "yes";
+                answersQuestions[currentRound][answer] = "yes";
             } else {
-                answersQuestions[i][1] = "no";
+                answersQuestions[currentRound][answer] = "no";
 
             }
 

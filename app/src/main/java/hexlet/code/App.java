@@ -6,8 +6,10 @@ import java.util.Scanner;
 public class App {
 
     public static void printMenu() {
-        System.out.println("--------\n| MENU | \n--------\nto start please enter corresponding number: "
-                + "\n1 - Greet\n2 - IsEven\n3 - Calculator\n4 - GDC\n5 - Progression\n6 - IsPrime\n0 - Exit");
+        System.out.println("--------\n| MENU | \n--------\n"
+                + "to start please enter corresponding number: "
+                + "\n1 - Greet\n2 - IsEven\n3 - Calculator\n"
+                + "4 - GDC\n5 - Progression\n6 - IsPrime\n0 - Exit");
 
     }
 

@@ -4,15 +4,22 @@ import java.util.Random;
 
 public class GCD {
     public static void main(String[] args) {
-
-        String gameObjective = "Find the greatest common divisor of given numbers.";
+        int question = 0;
+        int answer = 1;
+        int upperLimit = 100;
+        int amountOfRounds = 3;
+        String gameObjective = "Find the greatest "
+                + "common divisor of given numbers.";
         Random rand = new Random();
-        String[][] answersQuestions = new String[3][2];
+        String[][] answersQuestions = new String[amountOfRounds][2];
 
-        for (int i = 0; i < 3; i++) {
-            int numb1 = rand.nextInt(100) + 1;
-            int numb2 = rand.nextInt(100) + 1;
-            answersQuestions[i][0] = numb1 + " " + numb2;
+        for (int currendRound = 0;
+             currendRound < amountOfRounds;
+             currendRound++) {
+            int numb1 = rand.nextInt(upperLimit) + 1;
+            int numb2 = rand.nextInt(upperLimit) + 1;
+            // +1 ensures that limit is not going to be zero
+            answersQuestions[currendRound][question] = numb1 + " " + numb2;
 
             while (numb1 != numb2) {
                 if (numb1 > numb2) {
@@ -22,10 +29,10 @@ public class GCD {
                 }
             }
 
-            answersQuestions[i][1] = String.valueOf(numb1);
+            answersQuestions[currendRound][answer] = String.valueOf(numb1);
 
         }
-        Engine.Run(answersQuestions, gameObjective );
+        Engine.Run(answersQuestions, gameObjective);
     }
 }
 

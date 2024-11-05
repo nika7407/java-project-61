@@ -4,23 +4,25 @@ import java.util.Scanner;
 
 public class Engine {
     public static void Run(String[][] answersQuestions,String gameObjective) {
-
-     String name = Cli.greet() ;
-
-     int roundCounter = 0;
-     while (roundCounter < 3) {
+        int question = 0;
+        int answer = 1;
+        int currentRound  = 0;
+        int rounds = 3;
+        // variables
+     String userName = Cli.greet();
+     while (currentRound < rounds) {
 
          System.out.println(gameObjective);
-         System.out.println("Question: "+answersQuestions[roundCounter][0]);
+         System.out.println("Question: "+answersQuestions[currentRound][question]);
          Scanner scanner = new Scanner(System.in);
          String input = scanner.nextLine();
 
-         if (input.equals(answersQuestions[roundCounter][1])) {
+         if (input.equals(answersQuestions[currentRound][answer])) {
              System.out.println("Correct!");
-             roundCounter++;
+             currentRound++;
          } else {
-             System.out.println("'"+input+"' is wrong answer ;(. Correct answer was '"+answersQuestions[roundCounter][1]+"'.\n" +
-                     "Let's try again, "+name+"!);");
+             System.out.println("'"+input+"' is wrong answer ;(. Correct answer was '"+answersQuestions[currentRound][1]+"'.\n" +
+                     "Let's try again, "+ userName +"!);");
              System.exit(0);
 
          }
@@ -29,7 +31,7 @@ public class Engine {
 
      }
 
-        System.out.println("Congratulations, "+name+"!");
+        System.out.println("Congratulations, "+ userName +"!");
 
 
     }
