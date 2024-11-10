@@ -11,4 +11,5 @@ i think its cool
 - [Наибольший общий делитель](https://asciinema.org/a/E5jTkx54FLq6q5VW34oYFZxLu)
 - [Прогрессия](https://asciinema.org/a/t2QE98YWqV6iRBxbtxgXpTcMo)
 - [простык числа]( https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj)
+- [![asciicast](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj.svg)](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj)  
   
