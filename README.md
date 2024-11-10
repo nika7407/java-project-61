@@ -6,10 +6,19 @@
 i think its cool
 
 ## Game Guide
-- [чёт и нечет](https://asciinema.org/a/taW2uujF8zWtj7zod3RQQdqQs)
-- [калькулятор](https://asciinema.org/a/5CgaMTBMFYkbpFhGUIEBvs7gN)
-- [Наибольший общий делитель](https://asciinema.org/a/E5jTkx54FLq6q5VW34oYFZxLu)
-- [Прогрессия](https://asciinema.org/a/t2QE98YWqV6iRBxbtxgXpTcMo)
-- [простык числа]( https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj)
-- [![asciicast](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj.svg)](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj)  
+--------------------------
+чёт и нечет
+[![asciicast](https://asciinema.org/a/taW2uujF8zWtj7zod3RQQdqQs)](https://asciinema.org/a/taW2uujF8zWtj7zod3RQQdqQs).
+--------------------------
+калькулятор
+[![asciicast](https://asciinema.org/a/5CgaMTBMFYkbpFhGUIEBvs7gN)](https://asciinema.org/a/5CgaMTBMFYkbpFhGUIEBvs7gN).
+--------------------------
+Наибольший общий делитель
+ [![asciicast](https://asciinema.org/a/E5jTkx54FLq6q5VW34oYFZxLu.svg)](https://asciinema.org/a/E5jTkx54FLq6q5VW34oYFZxLu)
+--------------------------
+Прогрессия
+[![asciicast](https://asciinema.org/a/t2QE98YWqV6iRBxbtxgXpTcMo.svg)](https://asciinema.org/a/t2QE98YWqV6iRBxbtxgXpTcMo)
+--------------------------
+простык числа
+[![asciicast](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj.svg)](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj).
   
