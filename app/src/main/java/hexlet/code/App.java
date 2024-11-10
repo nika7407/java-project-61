@@ -55,23 +55,23 @@ public class App {
                 break;
 
             case ISEVEN_OPTION:
-                IsEven.main(args);
+                IsEven.IsEven(args);
                 break;
 
             case CALCULATOR_OPTION:
-                Calc.main(args);
+                Calc.Calc(args);
                 break;
 
             case GCD_OPTION:
-                GCD.main(args);
+                GCD.GCD(args);
                 break;
 
             case PROGRESSION_OPTION:
-                Progression.main(args);
+                Progression.Progression(args);
                 break;
 
             case ISPRIME_OPTION:
-                Prime.main(args);
+                Prime.Prime(args);
                 break;
 
             case EXIT_OPTION:

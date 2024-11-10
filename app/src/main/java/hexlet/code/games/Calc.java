@@ -13,7 +13,7 @@ public class Calc {
     private static final int MULTIPLY_OPERATOR = 2;
     private static final int AMOUNT_OF_ROUNDS = 3;
     private static final int LOWER_LIMIT = 1;
-    public static void main(String[] args) {
+    public static void Calc(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "What is the result of the expression?";

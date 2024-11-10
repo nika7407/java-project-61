@@ -1,5 +1,4 @@
 plugins {
-    id("java")
     id("application")
     id("checkstyle")
 }
@@ -10,10 +9,6 @@ repositories {
 }
 application {
     mainClass = "hexlet.code.App"
-}
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
 }
 
 

@@ -10,10 +10,10 @@ public class Progression {
     private static final int UPPER_LIMIT_STEP = 10;
     private static final int MIN_LENGTH = 6;
     private static final int AMOUNT_OF_ROUNDS = 3;
-    private static final int MAX_LENGTH = 6;
+    private static final int MAX_LENGTH = 12;
     private static final int LOWER_LIMIT_STEP = 1;
     private static final int LOWER_LIMIT_START = 1;
-    public static void main(String[] args) {
+    public static void Progression(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "What number is missing in the progression?";

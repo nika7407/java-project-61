@@ -9,7 +9,7 @@ public class IsEven {
     private static final int UPPER_LIMIT = 100;
     private static final int AMOUNT_OF_ROUNDS = 3;
     private static final int LOWER_LIMIT = 1;
-    public static void main(String[] args) {
+    public static void IsEven(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "Answer 'yes' if the number is even, otherwise answer 'no'.";
