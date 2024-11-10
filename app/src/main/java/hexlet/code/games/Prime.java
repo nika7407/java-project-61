@@ -9,7 +9,7 @@ public class Prime {
     private static final int UPPER_LIMIT = 100;
     private static final int AMOUNT_OF_ROUNDS = 3;
     private static final int LOWER_LIMIT = 1;
-    public static void Prime(String[] args) {
+    public static void game(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

@@ -13,16 +13,16 @@ public class Calc {
     private static final int MULTIPLY_OPERATOR = 2;
     private static final int AMOUNT_OF_ROUNDS = 3;
     private static final int LOWER_LIMIT = 1;
-    public static void Calc(String[] args) {
+    public static void game(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "What is the result of the expression?";
         String[][] answersQuestions = new String[AMOUNT_OF_ROUNDS][2];
 
         for (int i = 0; i < AMOUNT_OF_ROUNDS; i++) {
-            int number1 = getRandomInt(LOWER_LIMIT,UPPER_LIMIT);
-            int number2 = getRandomInt(LOWER_LIMIT,UPPER_LIMIT);
-            int operatorVariable = getRandomInt(0,OPERATOR_COUNT);
+            int number1 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
+            int number2 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
+            int operatorVariable = getRandomInt(0, OPERATOR_COUNT);
 
             switch (operatorVariable) {
                 case ADD_OPERATOR:

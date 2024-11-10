@@ -10,7 +10,7 @@ public class GCD {
     private static final int LOWER_LIMIT = 1;
     private static final int AMOUNT_OF_ROUNDS = 3;
 
-    public static void GCD(String[] args) {
+    public static void game(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "Find the greatest common divisor of given numbers.";
