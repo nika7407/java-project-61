@@ -2,23 +2,23 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import static hexlet.code.Utils.getRandomInt;
 
 public class GCD {
 
     private static final int UPPER_LIMIT = 100;
+    private static final int LOWER_LIMIT = 1;
     private static final int AMOUNT_OF_ROUNDS = 3;
 
     public static void main(String[] args) {
         int question = 0;
         int answer = 1;
         String gameObjective = "Find the greatest common divisor of given numbers.";
-        Random rand = new Random();
         String[][] answersQuestions = new String[AMOUNT_OF_ROUNDS][2];
 
         for (int currentRound = 0; currentRound < AMOUNT_OF_ROUNDS; currentRound++) {
-            int numb1 = rand.nextInt(UPPER_LIMIT) + 1;
-            int numb2 = rand.nextInt(UPPER_LIMIT) + 1;
+            int numb1 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
+            int numb2 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             answersQuestions[currentRound][question] = numb1 + " " + numb2;
 
             while (numb1 != numb2) {
