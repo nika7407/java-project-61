@@ -13,6 +13,16 @@ public class Progression {
     private static final int MAX_LENGTH = 12;
     private static final int LOWER_LIMIT_STEP = 1;
     private static final int LOWER_LIMIT_START = 1;
+
+    public static int[] generateProgression(int start, int step, int length) {
+        int[] progression = new int[length];
+        // Generate the progression
+        for (int k = 0; k < length; k++) {
+            progression[k] = start + (step * k);
+        }
+        return progression;
+    }
+
     public static void game(String[] args) {
         int question = 0;
         int answer = 1;
@@ -25,17 +35,10 @@ public class Progression {
             int length = getRandomInt(MIN_LENGTH, MAX_LENGTH);  // Ensures length is between 6 and 11
             int empty = getRandomInt(0, length - 1);  // Random index to hide in the progression
 
-            int[] progression = new int[length];
-            answersQuestions[currentRound][question] = "";
-
-            // Generate the progression
-            for (int k = 0; k < length; k++) {
-                progression[k] = start + (step * k);
-            }
-
+            int[] progression = generateProgression(start, step, length);
             // Set the answer (the missing number in the progression)
             answersQuestions[currentRound][answer] = String.valueOf(progression[empty]);
-
+            answersQuestions[currentRound][question] = "";
             // Create the question with the missing number
             for (int m = 0; m < progression.length; m++) {
                 if (m != empty) {

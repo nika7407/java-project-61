@@ -9,6 +9,24 @@ public class Prime {
     private static final int UPPER_LIMIT = 100;
     private static final int AMOUNT_OF_ROUNDS = 3;
     private static final int LOWER_LIMIT = 1;
+
+    public static boolean isNumberPrime(int number) {
+        boolean isPrime = true;
+        if (number <= 1) {
+            return false;
+        } else {
+
+            for (int k = 2; k < number; k++) {
+                if (number % k == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        return isPrime;
+    }
+
+
     public static void game(String[] args) {
         int question = 0;
         int answer = 1;
@@ -19,18 +37,9 @@ public class Prime {
             int number = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             answersQuestions[currentRound][question] = String.valueOf(number);
 
-            if (number <= 1) {
-                answersQuestions[currentRound][answer] = "no";
-            } else {
-                boolean isPrime = true;
-                for (int k = 2; k < number; k++) {
-                    if (number % k == 0) {
-                        isPrime = false;
-                        break;
-                    }
-                }
-                answersQuestions[currentRound][answer] = isPrime ? "yes" : "no";
-            }
+
+                answersQuestions[currentRound][answer] = isNumberPrime(number) ? "yes" : "no";
+
         }
 
         Engine.run(answersQuestions, gameObjective);

@@ -10,6 +10,19 @@ public class GCD {
     private static final int LOWER_LIMIT = 1;
     private static final int AMOUNT_OF_ROUNDS = 3;
 
+    public static int findGDC( int number1, int number2 ) {
+       int numb1 = number1;
+       int numb2 = number2;
+        while (numb1 != numb2) {
+            if (numb1 > numb2) {
+                numb1 = numb1 - numb2;
+            } else {
+                numb2 = numb2 - numb1;
+            }
+        }
+        return numb1;
+    }
+
     public static void game(String[] args) {
         int question = 0;
         int answer = 1;
@@ -20,16 +33,7 @@ public class GCD {
             int numb1 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             int numb2 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             answersQuestions[currentRound][question] = numb1 + " " + numb2;
-
-            while (numb1 != numb2) {
-                if (numb1 > numb2) {
-                    numb1 = numb1 - numb2;
-                } else {
-                    numb2 = numb2 - numb1;
-                }
-            }
-
-            answersQuestions[currentRound][answer] = String.valueOf(numb1);
+            answersQuestions[currentRound][answer] = String.valueOf(findGDC(numb1, numb2));
         }
 
         Engine.run(answersQuestions, gameObjective);

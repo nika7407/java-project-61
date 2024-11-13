@@ -13,6 +13,24 @@ public class Calc {
     private static final int MULTIPLY_OPERATOR = 2;
     private static final int AMOUNT_OF_ROUNDS = 3;
     private static final int LOWER_LIMIT = 1;
+
+    public static int calculateAnswer(int number1, int number2, int operatorVariable) {
+        switch (operatorVariable) {
+            case ADD_OPERATOR:
+                return number1 + number2;
+
+            case SUBTRACT_OPERATOR:
+                return number1 - number2;
+
+            case MULTIPLY_OPERATOR:
+                return number1 * number2;
+
+            default:
+                System.out.println("Something went VERY wrong");
+                return 0;
+        }
+    }
+
     public static void game(String[] args) {
         int question = 0;
         int answer = 1;
@@ -23,27 +41,26 @@ public class Calc {
             int number1 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             int number2 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             int operatorVariable = getRandomInt(0, OPERATOR_COUNT);
-
+            String operator = "";
             switch (operatorVariable) {
                 case ADD_OPERATOR:
-                    answersQuestions[i][answer] = String.valueOf(number1 + number2);
-                    answersQuestions[i][question] = number1 + " + " + number2;
+                    operator = " + ";
                     break;
 
                 case SUBTRACT_OPERATOR:
-                    answersQuestions[i][answer] = String.valueOf(number1 - number2);
-                    answersQuestions[i][question] = number1 + " - " + number2;
+                    operator = " - ";
                     break;
 
                 case MULTIPLY_OPERATOR:
-                    answersQuestions[i][answer] = String.valueOf(number1 * number2);
-                    answersQuestions[i][question] = number1 + " * " + number2;
+                    operator = " * ";
                     break;
 
                 default:
                     System.out.println("Something went VERY wrong");
                     break;
             }
+            answersQuestions[i][question] = number1 + operator + number2;
+            answersQuestions[i][answer] = String.valueOf(calculateAnswer(number1, number2, operatorVariable));
         }
 
         Engine.run(answersQuestions, gameObjective);
