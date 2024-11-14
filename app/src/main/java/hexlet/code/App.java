@@ -40,7 +40,7 @@ public class App {
                 return userInput.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number:");
-                userInput.next(); // Clear the invalid input
+                userInput.next(); // Clear the invalid inputeow
             }
         }
     }
