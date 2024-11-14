@@ -27,7 +27,7 @@ public class IsEven {
         for (int currentRound = 0; currentRound < AMOUNT_OF_ROUNDS; currentRound++) {
             int number = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             answersQuestions[currentRound][question] = String.valueOf(number);
-            answersQuestions[currentRound][answer] = isNumberEven(number) ? "Yes" : "No";
+            answersQuestions[currentRound][answer] = isNumberEven(number) ? "yes" : "no";
         }
 
         Engine.run(answersQuestions, gameObjective);
