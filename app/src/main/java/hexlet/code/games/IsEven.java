@@ -11,11 +11,7 @@ public class IsEven {
     private static final int LOWER_LIMIT = 1;
 
     public static boolean isNumberEven(int number) {
-        if (number % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return number % 2 == 0;
     }
 
     public static void game(String[] args) {
