@@ -9,7 +9,7 @@ public class GCD {
     private static final int UPPER_LIMIT = 100;
     private static final int LOWER_LIMIT = 1;
     private static final int AMOUNT_OF_ROUNDS = 3;
-    public static int findGDC( int number1, int number2 ) {
+    public static int findGDC(int number1, int number2) {
        int numb1 = number1;
        int numb2 = number2;
         while (numb1 != numb2) {
