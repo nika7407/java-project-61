@@ -10,9 +10,13 @@ public class Engine {
         int question = 0;
         int answer = 1;
         int currentRound = 0;
-        String userName = Cli.greet();
 
-        try (Scanner scanner = new Scanner(System.in)) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
+
             while (currentRound < ROUNDS) {
 
                 System.out.println(gameObjective);
@@ -29,7 +33,6 @@ public class Engine {
                     System.exit(0);
                 }
             }
-        }
 
         System.out.println("Congratulations, " + userName + "!");
     }

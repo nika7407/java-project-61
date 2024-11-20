@@ -14,7 +14,7 @@ public class IsEven {
         return number % 2 == 0;
     }
 
-    public static void game(String[] args) {
+    public static void game() {
         int question = 0;
         int answer = 1;
         String gameObjective = "Answer 'yes' if the number is even, otherwise answer 'no'.";

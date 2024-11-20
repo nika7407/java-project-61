@@ -27,7 +27,7 @@ public class Prime {
     }
 
 
-    public static void game(String[] args) {
+    public static void game() {
         int question = 0;
         int answer = 1;
         String gameObjective = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

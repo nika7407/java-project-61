@@ -31,7 +31,7 @@ public class Calc {
         }
     }
 
-    public static void game(String[] args) {
+    public static void game() {
         int question = 0;
         int answer = 1;
         String gameObjective = "What is the result of the expression?";
@@ -41,25 +41,9 @@ public class Calc {
             int number1 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             int number2 = getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
             int operatorVariable = getRandomInt(0, OPERATOR_COUNT);
-            String operator = "";
-            switch (operatorVariable) {
-                case ADD_OPERATOR:
-                    operator = " + ";
-                    break;
+            char[] operator = {'+', '-', '*'};
 
-                case SUBTRACT_OPERATOR:
-                    operator = " - ";
-                    break;
-
-                case MULTIPLY_OPERATOR:
-                    operator = " * ";
-                    break;
-
-                default:
-                    System.out.println("Something went VERY wrong");
-                    break;
-            }
-            answersQuestions[i][question] = number1 + operator + number2;
+            answersQuestions[i][question] = number1 + " " + operator[operatorVariable] + " " + number2;
             answersQuestions[i][answer] = String.valueOf(calculateAnswer(number1, number2, operatorVariable));
         }
 

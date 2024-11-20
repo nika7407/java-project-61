@@ -55,23 +55,23 @@ public class App {
                 break;
 
             case ISEVEN_OPTION:
-                IsEven.game(args);
+                IsEven.game();
                 break;
 
             case CALCULATOR_OPTION:
-                Calc.game(args);
+                Calc.game();
                 break;
 
             case GCD_OPTION:
-                GCD.game(args);
+                GCD.game();
                 break;
 
             case PROGRESSION_OPTION:
-                Progression.game(args);
+                Progression.game();
                 break;
 
             case ISPRIME_OPTION:
-                Prime.game(args);
+                Prime.game();
                 break;
 
             case EXIT_OPTION:

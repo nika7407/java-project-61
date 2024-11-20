@@ -23,7 +23,7 @@ public class Progression {
         return progression;
     }
 
-    public static void game(String[] args) {
+    public static void game() {
         int question = 0;
         int answer = 1;
         String gameObjective = "What number is missing in the progression?";
