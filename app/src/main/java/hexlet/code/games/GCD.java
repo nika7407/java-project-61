@@ -5,7 +5,6 @@ import hexlet.code.Engine;
 import static hexlet.code.Utils.getRandomInt;
 
 public class GCD {
-
     private static final int UPPER_LIMIT = 100;
     private static final int LOWER_LIMIT = 1;
     private static final int AMOUNT_OF_ROUNDS = 3;
