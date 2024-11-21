@@ -33,7 +33,7 @@ public class Progression {
             int start = getRandomInt(LOWER_LIMIT_START, UPPER_LIMIT_START);
             int step = getRandomInt(LOWER_LIMIT_STEP, UPPER_LIMIT_STEP);
             int length = getRandomInt(MIN_LENGTH, MAX_LENGTH);  // Ensures length is between 6 and 11
-            int empty = getRandomInt(0, length - 1);  // Random index to hide in the progression
+            int empty = getRandomInt(0, length - 1);  // Random index to hide in the progression meow
 
             int[] progression = generateProgression(start, step, length);
             // Set the answer (the missing number in the progression)
