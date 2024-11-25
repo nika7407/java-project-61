@@ -7,7 +7,7 @@ import static hexlet.code.Utils.getRandomInt;
 public class IsEven {
 
     private static final int UPPER_LIMIT = 100;
-    private static final int AMOUNT_OF_ROUNDS = 3;
+    private static final int AMOUNT_OF_ROUNDS = Engine.ROUNDS;
     private static final int LOWER_LIMIT = 1;
 
     public static boolean isNumberEven(int number) {

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static final int ROUNDS = 3;
+    public static final int ROUNDS = 3;
 
     public static void run(String[][] answersQuestions, String gameObjective) {
         int question = 0;
@@ -17,19 +17,18 @@ public class Engine {
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
 
-            while (currentRound < ROUNDS) {
+        for (int round = 0; round < ROUNDS; round++) {
 
                 System.out.println(gameObjective);
-                System.out.println("Question: " + answersQuestions[currentRound][question]);
+                System.out.println("Question: " + answersQuestions[round][question]);
 
                 String input = scanner.nextLine();
 
-                if (input.equals(answersQuestions[currentRound][answer])) {
+                if (input.equals(answersQuestions[round][answer])) {
                     System.out.println("Correct!");
-                    currentRound++;
                 } else {
                     System.out.println("'" + input + "' is wrong answer ;(. Correct answer was '"
-                            + answersQuestions[currentRound][1] + "'.\nLet's try again, " + userName + "!");
+                            + answersQuestions[round][1] + "'.\nLet's try again, " + userName + "!");
                     System.exit(0);
                 }
             }

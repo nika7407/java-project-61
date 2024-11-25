@@ -11,7 +11,7 @@ public class Calc {
     private static final int ADD_OPERATOR = 0;
     private static final int SUBTRACT_OPERATOR = 1;
     private static final int MULTIPLY_OPERATOR = 2;
-    private static final int AMOUNT_OF_ROUNDS = 3;
+    private static final int AMOUNT_OF_ROUNDS = Engine.ROUNDS;
     private static final int LOWER_LIMIT = 1;
 
     public static int calculateAnswer(int number1, int number2, int operatorVariable) {

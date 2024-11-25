@@ -7,7 +7,7 @@ import static hexlet.code.Utils.getRandomInt;
 public class Prime {
 
     private static final int UPPER_LIMIT = 100;
-    private static final int AMOUNT_OF_ROUNDS = 3;
+    private static final int AMOUNT_OF_ROUNDS = Engine.ROUNDS;
     private static final int LOWER_LIMIT = 1;
 
     public static boolean isNumberPrime(int number) {
@@ -16,7 +16,7 @@ public class Prime {
             return false;
         } else {
 
-            for (int k = 2; k < number; k++) {
+            for (int k = 2; k < Math.sqrt(number); k++) {
                 if (number % k == 0) {
                     isPrime = false;
                     break;
