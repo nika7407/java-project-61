@@ -14,18 +14,18 @@ and also showcase them to anyone who's interested.
 
 ## Game Guide
 
-### чёт и нечет
+### 1. Even or Odd
 [![asciicast](https://asciinema.org/a/taW2uujF8zWtj7zod3RQQdqQs.svg)](https://asciinema.org/a/taW2uujF8zWtj7zod3RQQdqQs)
 
-### калькулятор
+### 2. Calculator
 [![asciicast](https://asciinema.org/a/5CgaMTBMFYkbpFhGUIEBvs7gN.svg)](https://asciinema.org/a/5CgaMTBMFYkbpFhGUIEBvs7gN)
 
-### Наибольший общий делитель
+### 3. Greatest Common Divisor
 [![asciicast](https://asciinema.org/a/E5jTkx54FLq6q5VW34oYFZxLu.svg)](https://asciinema.org/a/E5jTkx54FLq6q5VW34oYFZxLu)
 
-### Прогрессия
+### 4. Arithmetic Progression 
 [![asciicast](https://asciinema.org/a/t2QE98YWqV6iRBxbtxgXpTcMo.svg)](https://asciinema.org/a/t2QE98YWqV6iRBxbtxgXpTcMo)
 
-### простык числа
+### 5. Prime Numbers
 [![asciicast](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj.svg)](https://asciinema.org/a/PrTe1aGSw5lnWn0uwrWCwP4aj)
   
