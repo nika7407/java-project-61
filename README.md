@@ -3,13 +3,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/9995f04b68df0c6e67f1/maintainability)](https://codeclimate.com/github/nika7407/java-project-61/maintainability)
 
 ## Hey, Thats my first project! ( like EVER )
-### i think its **cool**
-this little project contains 5 mini games and the idea of this project is to use my coding skills on practise
-and also showcase them to anyone who's interested.
+### and I think it's really cool! 🎉
 
+It contains five mini-games, designed to help me practice my coding skills and showcase them to anyone interested.
 "make install" - to install
-
-
 "make run-dist" - to launch
 
 ## Game Guide
